@@ -1,0 +1,42 @@
+name: spot_saver_pwa
+description: "A minimal fully local spot saver PWA using flutter_map."
+publish_to: 'none'
+version: 1.0.0+1
+
+# ⬇️ エラーの原因となっていたSDKバージョン制約の追加
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 状態管理 & 内部ストレージ保存
+  flutter_riverpod: ^2.5.1
+  shared_preferences: ^2.2.3
+
+  # 地図描画 & 位置情報
+  flutter_map: ^6.1.0
+  latlong2: ^0.9.1
+  geolocator: ^11.0.0
+
+  # 外部連携 & 一意なID生成
+  url_launcher: ^6.2.5
+  uuid: ^4.3.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+# プロジェクトの左端（インデントなし）に合わせて貼り付けてください
+flutter_launcher_icons:
+  web:
+    generate: true
+    image_path: "assets/icon.png"
+    background_color: "#F8FAFC"
+    theme_color: "#2563EB"
